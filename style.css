@@ -1,0 +1,322 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Blue: hsl(246, 80%, 60%)
+
+- Light red (work): hsl(15, 100%, 70%)
+- Soft blue (play): hsl(195, 74%, 62%)
+- Light red (study): hsl(348, 100%, 68%)
+- Lime green (exercise): hsl(145, 58%, 55%)
+- Violet (social): hsl(264, 64%, 52%)
+- Soft orange (self care): hsl(43, 84%, 65%)
+
+### Neutral
+
+- Very dark blue: hsl(226, 43%, 10%)
+- Dark blue: hsl(235, 46%, 20%)
+- Desaturated blue: hsl(235, 45%, 61%)
+- Pale Blue: hsl(236, 100%, 87%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500
+*/
+
+
+:root{
+
+--blue: hsl(246, 80%, 60%);
+
+--lightOrange: hsl(15, 100%, 70%);
+--softBlue: hsl(195, 74%, 62%);
+--lightRed: hsl(348, 100%, 68%);
+--limeGreen: hsl(145, 58%, 55%);
+--violet: hsl(264, 64%, 52%);
+--softOrange: hsl(43, 84%, 65%);
+
+--veryDarkBlue: hsl(226, 43%, 10%);
+--darkBlue: hsl(235, 46%, 20%);
+--noSatBlue: hsl(235, 45%, 61%);
+--paleBlue: hsl(236, 100%, 87%);
+}
+body{
+    display: grid;
+    grid-template-columns: 0.5fr repeat(4, 1fr) 0.5fr ;
+    gap: 2rem;
+    grid-template-rows: repeat(4, auto);
+    background-color: var(--veryDarkBlue);
+    font-family: 'Rubik', sans-serif;
+    
+    
+}
+
+.card-profile{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    background-color: var(--darkBlue);
+    border-radius: 25px
+    ;
+}
+
+.profile{
+    background-color: var(--blue);
+    border-radius: 25px;
+    padding: 1rem 0 1rem 1rem;
+    margin-right: 0;
+    height: 60%;
+    width: 20vw;
+    color: white;
+
+  
+}
+
+.profile img{
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 4rem;
+    height: auto;
+    
+}
+
+.profile > *{
+    font-weight: 300;
+}
+
+.profile h1{
+    width: 50%;
+    font-size: 3rem;
+}
+
+.profile p{
+    width: 50%;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+
+}
+
+nav a{
+    padding: 0.5rem;
+    text-decoration: none;
+    color: var(--noSatBlue);
+}
+
+
+
+.card{
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+
+
+.display{
+    background-color: var(--darkBlue);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-bottom: 0;
+  
+}
+
+.display > * {
+    font-weight: 300;
+   
+}
+
+.display h1{
+    font-size: 3rem;
+    margin: 0;
+}
+
+.flex-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.flex-heading > * {
+    font-weight: 400;
+  
+}
+
+.flex-heading img{
+    height: 0.5rem;
+    width: auto;
+}
+
+.img-container{
+    height: 5rem;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    
+} 
+
+
+.grid-one{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.grid-one > .img-container{
+    background-color: var(--lightOrange);
+    border-radius: 20px;
+   
+}
+
+.grid-two{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+.grid-two > .img-container{
+    background-color: var(--softBlue);
+    border-radius: 20px;
+   
+}
+
+.grid-three{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+.grid-three > .img-container{
+    background-color: var(--lightRed);
+    border-radius: 20px;
+   
+}
+
+.grid-four{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.grid-four > .img-container{
+    background-color: var(--limeGreen);
+    border-radius: 20px;
+   
+}
+.grid-five{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+.grid-five > .img-container{
+    background-color: var(--violet);
+    border-radius: 20px;
+   
+}
+
+.grid-six{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 5;
+    grid-column-end: 5;
+}
+
+.grid-six > .img-container{
+    background-color: var(--softOrange);
+    border-radius: 20px;
+   
+}
+
+.active{
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        flex-direction: row;   
+        justify-content: space-around;
+        
+    }
+
+    .card, .card-profile{
+        width: 60%;
+    }
+
+    .profile{
+        width: auto;
+        padding: 1rem 0 0.5rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .card, .card-profile{
+        height: auto;
+        width: 80%;
+    }
+
+    .display{
+        padding-bottom: 0.5rem;
+    }
+
+    .display > * {
+        margin-top: 0;
+    }
+
+    .display h6{
+        margin-bottom: 1rem;
+    }
+
+
+    .flex-heading > *{
+        font-size: 1.5rem;
+        margin: 0 0 2rem 0;
+    }
+}
